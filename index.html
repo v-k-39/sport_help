@@ -17,7 +17,7 @@
       "name": "Реабилитолог Марина Чернохатова",
       "url": "https://v-k-39.github.io/sport_rehab/"
     }
-</script>
+    </script>
 
     <style>
         * {
@@ -397,7 +397,7 @@
             transform: translateY(-5px);
         }
 
-        /* Галерея */
+        /* Галерея (Flexbox для красивого центрирования) */
         #gallery {
             background: white;
             position: relative;
@@ -418,8 +418,9 @@
         }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
         }
 
@@ -430,6 +431,8 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
             cursor: pointer;
             transition: all 0.4s ease;
+            flex: 1 1 300px;
+            max-width: 360px; /* Чтобы карточки не растягивались слишком сильно */
         }
 
         .gallery-item:hover {
@@ -440,6 +443,7 @@
             height: 250px;
             object-fit: cover;
             transition: transform 0.6s ease;
+            display: block;
         }
         .gallery-item:hover img {
             transform: scale(1.1);
@@ -630,8 +634,10 @@
             .contact-info p {
                 word-break: break-word;
             }
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            
+            .gallery-item {
+                flex: 1 1 100%;
+                max-width: 100%;
             }
             .gallery-item img {
                 height: auto;
@@ -777,10 +783,12 @@
                 <p class="gallery-subtitle">От реабилитации и тренировок до больших стартов — результаты работы моих подопечных</p>
             </div>
             <div class="gallery-grid">
+                <!-- Добавлена photo5.jpg, теперь фото 8 и они красиво отцентрированы -->
                 <div class="gallery-item fade-in-up"><img src="img/photo1.jpg" alt="Реабилитация и ЛФК" loading="lazy"><div class="gallery-caption">Реабилитация и ЛФК: восстановление подвижности и силы</div></div>
                 <div class="gallery-item fade-in-up"><img src="img/photo2.jpg" alt="Функциональная тренировка" loading="lazy"><div class="gallery-caption">Функциональная тренировка: баланс, координация, сила</div></div>
                 <div class="gallery-item fade-in-up"><img src="img/photo3.jpg" alt="Баланс и стабилизация" loading="lazy"><div class="gallery-caption">Баланс и стабилизация: подготовка к нагрузкам</div></div>
                 <div class="gallery-item fade-in-up"><img src="img/photo4.jpg" alt="Городской марафон" loading="lazy"><div class="gallery-caption">Тренировки, где важен не только результат, но и вовлечённость: работаем над прогрессом вместе</div></div>
+                <div class="gallery-item fade-in-up"><img src="img/photo5.jpg" alt="Спортивный забег" loading="lazy"><div class="gallery-caption">Спортивный забег: преодоление дистанции</div></div>
                 <div class="gallery-item fade-in-up"><img src="img/photo6.jpg" alt="Массовый старт" loading="lazy"><div class="gallery-caption">Турнир: первые победы и награды юных спортсменов</div></div>
                 <div class="gallery-item fade-in-up"><img src="img/photo7.jpg" alt="Вечерний забег" loading="lazy"><div class="gallery-caption">Массовый старт: командный дух и мотивация</div></div>
                 <div class="gallery-item fade-in-up"><img src="img/photo8.jpg" alt="Лечебный массаж и реабилитация" loading="lazy"><div class="gallery-caption">Лечебный массаж: восстановление после травм и нагрузок</div></div>
@@ -807,10 +815,10 @@
                 <div class="contact-info">
                     <p><strong>📞 Телефон:</strong> +7 (918) 580-44-02</p>
                     <p><strong>✉️ Email:</strong> bagira_479@mail.ru</p>
-                    <p><strong>📢 Канал MAX:</strong> <a href="https://max.ru/join/5S9T7mOJQlDQ-cUzQxaOKGDsEoPygfocwslZt6DJRn0" target="_blank" style="color:#ffb347; text-decoration:underline;">Подписаться</a></p>
                     <p><strong>🔗 Клуб «Легенда» Таганрог:</strong><br>
                        <a href="https://vk.ru/club57239984" target="_blank" style="color:#ffb347; text-decoration:underline;">ВКонтакте</a> |
                        <a href="https://t.me/taganrog_legenda_beg" target="_blank" style="color:#ffb347; text-decoration:underline;">Telegram</a> |
+                       <a href="https://max.ru/join/5S9T7mOJQlDQ-cUzQxaOKGDsEoPygfocwslZt6DJRn0" target="_blank" style="color:#ffb347; text-decoration:underline;">MAX</a> |
                        <a href="https://instagram.com/klb.legenda?utm_medium=copy_link" target="_blank" style="color:#ffb347; text-decoration:underline;">Instagram</a>
                     </p>
                 </div>
